@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="row">
-   <div class="col-5 border border-secondary  p-4">
+   <div class="col-5 m-2 border border-secondary  p-4">
       <h1 class="text-center text-light p-4 bg-info">Register Student</h1>
       <form method="post" action="">
          {% csrf_token %}
@@ -9,7 +9,7 @@
          <button type="submit" class="btn btn-success form-control">Register</button>
       </form>
    </div>
-   <div class="col-6 m-2">
+   <div class="col-6 m-2 border border-secondary  p-4">
       <h1 class="text-center text-light border border-info p-4 bg-secondary">Students List</h1>
       <table class="table table-striped">
          <thead>

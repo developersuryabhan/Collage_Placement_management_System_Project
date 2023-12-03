@@ -9,4 +9,6 @@ urlpatterns = [
     path('interviews',views.interviews_page),
     path('interviews_update/<int:id>',views.interview_update),
     path('placements',views.placements),
+    path('login', views.Login, name="login"),
+
 ]

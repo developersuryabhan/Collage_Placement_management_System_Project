@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="row">
-   <div class="col-5 border border-secondary  p-4">
-      <h1 class="text-center text-light p-4 bg-info">Placements</h1>
+   <div class="col-5 m-2 border border-secondary  p-4">
+      <h1 class="text-center text-light p-4 bg-info">Placement offer</h1>
       <form method="post" action="">
          {% csrf_token %}
          {{ form.as_p }}
          <button type="submit" class="btn btn-success form-control">Submit</button>
       </form>
    </div>
-   <div class="col-6 m-2">
-      <h1 class="text-center text-light border border-info p-4 bg-secondary">Placements List</h1>
+   <div class="col-6 m-2 border border-secondary  p-4">
+      <h1 class="text-center text-light border border-info p-4 bg-secondary">Placements Don</h1>
       <table class="table table-striped">
          <thead>
             <tr>
                <th scope="col">S No.</th>
-               <th scope="col">Interview</th>
+               <th scope="col">Employee Name</th>
                <th scope="col">Placement_date</th>
                <th scope="col">Offered_salary</th>
             </tr>

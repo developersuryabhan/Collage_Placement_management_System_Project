@@ -1,4 +1,37 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+{% endblock head %}
+
 {% block body %}
-<h1 class="text-center text-light border border-secondary p-4 bg-primary">This is home page</h1>
+    <body>
+        <header class="m-t-6 text-dark text-center p-4">
+            <h1>Collage Placement Management System</h1>
+            <p>Welcome to our website</p>
+        </header>
+
+        <div class="content">
+                <div class="text-center text-dark p-4">
+                <h2>The best platform in your career.</h2>
+                <p>"Enhance your skills, get better opportunities".</p>
+             </div>
+
+        </div>
+
+        <footer class="bg-dark text-white text-center p-1  fixed-bottom ">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </footer>
+    </body>
+
 {% endblock body %}
+
+{% block js %}
+
+    <script>
+        function sendMessage() {
+            alert('Message sent!'); 
+        }
+    </script>
+{% endblock js %}

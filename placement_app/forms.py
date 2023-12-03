@@ -12,6 +12,18 @@ class StudentForm(forms.ModelForm):
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'
             visible.field.widget.attrs['maxlength'] = 50
+
+class StudentEditForm(forms.ModelForm):
+    class Meta:
+        model = Students
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super(StudentEditForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+            visible.field.widget.attrs['maxlength'] = 50
+    # interview_date = forms.CharField(widget=forms.TextInput(attrs={'type':'date'}))
             
 
 class CompanyForm(forms.ModelForm):

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect,get_object_or_404
-from .forms import StudentForm,CompanyForm,InterviewForm,InterviewEditForm,PlacementForm
+from .forms import StudentForm,CompanyForm,InterviewForm,InterviewEditForm,PlacementForm,StudentEditForm
 from .models import Students,Companies,Interviews,Placements
 
 # Create your views here.
@@ -98,3 +98,16 @@ def placements(request):
         "placements_data":Placements.objects.all()
     })
     return render(request, 'placements.html',context)
+
+
+# Log________________________
+def Login(request):
+    return render(request,"login.html")
+
+
+# Logout----------------------
+def logout(self, request):
+        request.session.clear()
+        return redirect('login')
+
+
